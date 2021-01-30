@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="排课助手.ExcelPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:排课助手"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+
+        <Custom:DataGrid Name="ExcelGrid" AutoGenerateColumns="False" Margin="140,135,0,0">
+            <!--<Custom:DataGrid.CellStyle>
+                <Style TargetType="Custom:DataGrid" >
+
+                    <Setter Property="Control.BorderThickness" Value="1"/>
+                    <Setter Property="Control.Background" Value="Blue"/>
+
+                    <Setter Property="Control.IsTapEnabled" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Custom:DataGridCell">
+                                <Custom:DataGridCell Tapped=""></Custom:DataGridCell>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="SelectedItem">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Custom:DataGridCell">
+                                <Grid BorderThickness="2" BorderBrush="Gray">
+                                    <Button Click="Button_Click"></Button>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Custom:DataGrid.CellStyle>-->
+            
+            <Custom:DataGrid.Columns>
+                <Custom:DataGridTemplateColumn Header="">
+                    <Custom:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Custom:DataGridCell Content="{Binding rowNumber}">
+                            </Custom:DataGridCell>
+                        </DataTemplate>
+                    </Custom:DataGridTemplateColumn.CellTemplate>
+                </Custom:DataGridTemplateColumn>
+                <!--<Custom:DataGridTextColumn Header="" Binding="{Binding rowNumber}" Width="40" ClipboardContentBinding="{Binding}" Visibility="Visible" IsReadOnly="True"></Custom:DataGridTextColumn>-->
+            </Custom:DataGrid.Columns>
+        </Custom:DataGrid>
+    </Grid>
+</Page>
