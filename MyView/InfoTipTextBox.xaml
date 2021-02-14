@@ -1,0 +1,81 @@
+﻿<UserControl
+    x:Class="排课助手.MyView.InfoTipTextBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:排课助手.MyView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:排课助手"
+    mc:Ignorable="d">
+
+    <Grid x:Name="grid" BorderThickness="0">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Style.Setters>
+                    <Setter Property="Text" Value="{x:Bind Text}"></Setter>
+                    <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                    <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                    <Setter Property="FontSize" Value="{x:Bind FontSize}"></Setter>
+                </Style.Setters>
+            </Style>
+            <Style TargetType="DropDownButton">
+                <Style.Setters>
+                    <Setter Property="Name" Value="DropDown"></Setter>
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                    <Setter Property="Padding" Value="0"></Setter>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+                    <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Text }" FontSize="{Binding FontSize}"></TextBlock>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style.Setters>
+            </Style>
+        </Grid.Resources>
+
+        <!--<DropDownButton Content="?">
+            <DropDownButton.Flyout>
+                
+                <MenuFlyout>
+                    <MenuFlyout.MenuFlyoutPresenterStyle>
+                        <Style TargetType="MenuFlyoutItem">
+                            <Style.Setters>
+                                <Setter Property="Background" Value="AliceBlue"></Setter>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+
+                                        <ControlTemplate>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style.Setters>
+                        </Style>
+                    </MenuFlyout.MenuFlyoutPresenterStyle>
+                    --><!--<Flyout.FlyoutPresenterStyle>
+                    
+                </Flyout.FlyoutPresenterStyle>--><!--
+                    <MenuFlyoutItem>
+                        <MenuFlyoutItem.Template>
+                            <ControlTemplate>
+                                <TextBlock Text="ds"></TextBlock>
+                            </ControlTemplate>
+                        </MenuFlyoutItem.Template>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem></MenuFlyoutItem>
+                    <MenuFlyoutItem></MenuFlyoutItem>
+                    <MenuFlyoutItem></MenuFlyoutItem>
+                </MenuFlyout>
+            </DropDownButton.Flyout>
+        </DropDownButton>-->
+        <!--<TextBlock FocusVisualPrimaryBrush="{x:Null}"></TextBlock>-->
+        <ToolTipService.ToolTip>
+            <ToolTip>
+                <local1:CourseTable FontSize="10" CourseContainer="{x:Bind CourseContainer}" Header="{x:Bind Text}" ></local1:CourseTable>
+            </ToolTip>
+        </ToolTipService.ToolTip>
+    </Grid>
+</UserControl>

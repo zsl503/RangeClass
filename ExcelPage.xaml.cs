@@ -74,10 +74,10 @@ namespace 排课助手
 
 		}
 
-		protected override async void OnNavigatedTo(NavigationEventArgs e)
+		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
 			base.OnNavigatedFrom(e);
-			
+
 			initTable((ExcelCell[,])e.Parameter);
 		}
 

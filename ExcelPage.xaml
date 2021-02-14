@@ -10,7 +10,7 @@
 
     <Grid >
 
-        <Custom:DataGrid Name="ExcelGrid" AutoGenerateColumns="False" Margin="140,135,0,0">
+        <Custom:DataGrid AutoGenerateColumns="False" Margin="140,135,0,0">
             <!--<Custom:DataGrid.CellStyle>
                 <Style TargetType="Custom:DataGrid" >
 

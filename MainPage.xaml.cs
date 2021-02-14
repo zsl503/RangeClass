@@ -42,16 +42,16 @@ namespace 排课助手
 
         }
 
-		private async void Button_Click(object sender, RoutedEventArgs e)
+		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-            Frame root = Window.Current.Content as Frame;
-            //excelCell = await ExcelAsync();
-            //root.Navigate(typeof(ExcelPage), excelCell);
-            root.Navigate(typeof(CourseTable));
+			Frame root = Window.Current.Content as Frame;
+			//excelCell = await ExcelAsync();
+			//root.Navigate(typeof(ExcelPage), excelCell);
+			root.Navigate(typeof(Editor));
 
-        }
+		}
 
-        async System.Threading.Tasks.Task<ExcelCell[,]> ExcelAsync()
+		async System.Threading.Tasks.Task<ExcelCell[,]> ExcelAsync()
         {
             FileOpenPicker openPicker = new FileOpenPicker();
             openPicker.CommitButtonText = "选中此文件";
@@ -121,7 +121,16 @@ namespace 排课助手
 
 			return temp;
         }
-	}
+
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+            Frame root = Window.Current.Content as Frame;
+            //excelCell = await ExcelAsync();
+            //root.Navigate(typeof(ExcelPage), excelCell);
+            root.Navigate(typeof(CourseTemplate));
+
+        }
+    }
 
 
 }

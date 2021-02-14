@@ -8,11 +8,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="601.032" d:DesignHeight="1005.242">
     <Grid x:Name="grid1">
-        <Custom:DataGrid Name="dataGrid1" ItemsSource="{Binding}" AutoGenerateColumns="False">
+        <Custom:DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False">
             <Custom:DataGrid.Columns>
                 <Custom:DataGridTextColumn Header="" Width="40" Binding="{Binding Context}" />
             </Custom:DataGrid.Columns>
         </Custom:DataGrid>
-        <Button Content="Button" Margin="344,587,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Button1" Margin="222,230,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Button" Margin="391,225,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Page>

@@ -119,8 +119,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CourseTable.xaml.cs">
+    <Compile Include="MyView\CourseCell.xaml.cs">
+      <DependentUpon>CourseCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyView\CourseTable.xaml.cs">
       <DependentUpon>CourseTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CourseTemplate.xaml.cs">
+      <DependentUpon>CourseTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.xaml.cs">
+      <DependentUpon>Editor.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExcelPage.xaml.cs">
       <DependentUpon>ExcelPage.xaml</DependentUpon>
@@ -128,9 +137,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyView\InfoTipTextBox.xaml.cs">
+      <DependentUpon>InfoTipTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Package\BaseData.cs" />
     <Compile Include="Package\ExcelCell.cs" />
+    <Compile Include="Package\SchoolClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TableTamplate.cs" />
+    <Compile Include="Package\TableTemplate.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -152,7 +166,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CourseTable.xaml">
+    <Page Include="MyView\CourseCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyView\CourseTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CourseTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,6 +189,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyView\InfoTipTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
